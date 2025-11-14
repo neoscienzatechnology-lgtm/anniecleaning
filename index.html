@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annie's House Cleaning - Professional Home Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .shine:hover::after {
+            left: 100%;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+            animation: blob 7s infinite;
+        }
+        @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 p-3 rounded-xl shadow-lg">
+                        <i class="fas fa-sparkles text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold gradient-text">Annie's House Cleaning</span>
+                        <p class="text-xs text-gray-500">Professional Home Care</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition font-medium">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition font-medium">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition font-medium">About</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-purple-600 transition font-medium">Pricing</a>
+                    <a href="#contact" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition transform hover:scale-105">Get Quote</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-32 pb-24 relative">
+        <div class="blob bg-purple-400 w-96 h-96 top-10 left-10"></div>
+        <div class="blob bg-blue-400 w-80 h-80 bottom-20 right-20" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block">
+                        <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30">
+                            ✨ Premium Cleaning Services Since 2015
+                        </span>
+                    </div>
+                    <h1 class="text-6xl md:text-7xl font-extrabold leading-tight">
+                        Your Home
+                        <span class="block text-yellow-300">Sparkling Clean</span>
+                    </h1>
+                    <p class="text-xl leading-relaxed text-purple-100">
+                        Experience professional residential cleaning services with exceptional quality and trust. 
+                        Make your home spotless with Annie's House Cleaning!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="shine bg-white text-purple-600 px-10 py-5 rounded-xl font-bold hover:shadow-2xl transition text-center transform hover:scale-105 flex items-center justify-center space-x-2">
+                            <span>Get Free Quote</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-purple-600 transition text-center transform hover:scale-105">
+                            Our Services
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 pt-4">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-yellow-300">10+</p>
+                            <p class="text-sm text-purple-200">Years Experience</p>
+                        </div>
+                        <div class="w-px h-12 bg-white/30"></div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-yellow-300">5000+</p>
+                            <p class="text-sm text-purple-200">Happy Clients</p>
+                        </div>
+                        <div class="w-px h-12 bg-white/30"></div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-yellow-300">98%</p>
+                            <p class="text-sm text-purple-200">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block relative">
+                    <div class="floating">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+                            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=600&h=600&fit=crop" alt="Professional Cleaning Service" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-8">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white/95 backdrop-blur-md p-4 rounded-xl text-center shadow-lg">
+                                        <i class="fas fa-home text-3xl mb-2 text-purple-600"></i>
+                                        <p class="text-xs font-bold text-gray-800">Deep Cleaning</p>
+                                    </div>
+                                    <div class="bg-white/95 backdrop-blur-md p-4 rounded-xl text-center shadow-lg">
+                                        <i class="fas fa-broom text-3xl mb-2 text-purple-600"></i>
+                                        <p class="text-xs font-bold text-gray-800">Regular Care</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#F9FAFB"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gradient-to-br from-white to-purple-50 p-10 rounded-2xl shadow-xl text-center border border-purple-100">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform rotate-3">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">100% Trustworthy</h3>
+                    <p class="text-gray-600 leading-relaxed">Verified and trained professionals to ensure your safety and peace of mind</p>
+                </div>
+                <div class="card-hover bg-gradient-to-br from-white to-purple-50 p-10 rounded-2xl shadow-xl text-center border border-purple-100">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform -rotate-3">
+                        <i class="fas fa-star text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Premium Quality</h3>
+                    <p class="text-gray-600 leading-relaxed">High-quality products and professional techniques for outstanding results</p>
+                </div>
+                <div class="card-hover bg-gradient-to-br from-white to-purple-50 p-10 rounded-2xl shadow-xl text-center border border-purple-100">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform rotate-3">
+                        <i class="fas fa-clock text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Always On Time</h3>
+                    <p class="text-gray-600 leading-relaxed">Service always delivered at the scheduled time, every time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4">
+                    <span class="bg-purple-100 text-purple-700 px-6 py-2 rounded-full text-sm font-semibold">
+                        OUR SERVICES
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    Complete <span class="gradient-text">Cleaning Solutions</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive services to make your home spotless and welcoming</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581578949510-fa7315c4c350?w=400&h=300&fit=crop" alt="General Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                            <i class="fas fa-home mr-1"></i> Popular
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">General Cleaning</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Complete cleaning of all rooms in your residence</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Bedrooms & Living rooms</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Kitchen</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Bathrooms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600428994440-e6f5f4a0c6b7?w=400&h=300&fit=crop" alt="Deep Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Deep Cleaning</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Detailed cleaning including hard-to-reach areas</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Windows & Glass</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Baseboards & Corners</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Appliances</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603712725038-8d344b6e4503?w=400&h=300&fit=crop" alt="Post-Construction Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Post-Construction</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Cleaning after renovations and construction</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Debris Removal</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Dust & Residue Cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Surface Polishing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=300&fit=crop" alt="Regular Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Regular Cleaning</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Weekly, biweekly or monthly plans</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Flexible Schedules</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Special Discount</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Dedicated Professional</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Move In/Out Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Move In/Out</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Complete cleaning for property handover</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Total Cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Interior Cabinets</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Outdoor Areas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-hover group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-transparent hover:border-purple-300 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&h=300&fit=crop" alt="Extra Cleaning Services" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                            <i class="fas fa-star mr-1"></i> New
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Extra Services</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Customized additional services</p>
+                        <ul class="text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Ironing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Organization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Upholstery Cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-br from-purple-50 to-white relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-purple-200 rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block">
+                        <span class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                            ABOUT US
+                        </span>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        About Annie's <span class="gradient-text">House Cleaning</span>
+                    </h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        With over 10 years of experience in the market, Annie's House Cleaning 
+                        is a reference in high-quality residential cleaning services.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Our mission is to provide clean, healthy and welcoming environments for 
+                        you and your family, using eco-friendly products and modern cleaning techniques.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-purple-100">
+                            <h4 class="text-4xl font-extrabold gradient-text mb-2">10+</h4>
+                            <p class="text-gray-600 font-semibold">Years Experience</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-purple-100">
+                            <h4 class="text-4xl font-extrabold gradient-text mb-2">5000+</h4>
+                            <p class="text-gray-600 font-semibold">Happy Clients</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-purple-100">
+                            <h4 class="text-4xl font-extrabold gradient-text mb-2">98%</h4>
+                            <p class="text-gray-600 font-semibold">Satisfaction Rate</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-purple-100">
+                            <h4 class="text-4xl font-extrabold gradient-text mb-2">24/7</h4>
+                            <p class="text-gray-600 font-semibold">Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl text-white shadow-2xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=400&fit=crop" alt="Professional Cleaning Team" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-3xl font-bold">Why Choose Annie's?</h3>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                    <ul class="space-y-5">
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">Trained and qualified professionals</span>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">Premium and eco-friendly cleaning products</span>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">Insurance against damages and accidents</span>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">100% satisfaction guarantee</span>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">Flexible scheduling and punctuality</span>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="bg-white/20 p-2 rounded-lg mr-4 group-hover:bg-white/30 transition">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <span class="text-lg">Personalized service</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4">
+                    <span class="bg-purple-100 text-purple-700 px-6 py-2 rounded-full text-sm font-semibold">
+                        PRICING PLANS
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    Choose Your <span class="gradient-text">Perfect Plan</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Select the ideal plan for your needs and budget</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Basic Plan -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-200 hover:border-purple-300 transition">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Basic</h3>
+                        <p class="text-gray-600 mb-6">Perfect for regular maintenance</p>
+                        <div class="mb-8">
+                            <span class="text-5xl font-extrabold gradient-text">$150</span>
+                            <span class="text-gray-600">/visit</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Up to 860 sq ft
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            All rooms cleaning
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            4 hours of service
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Products included
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-gray-100 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-200 transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="card-hover bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-8 relative shadow-2xl transform md:scale-105 border-2 border-purple-500">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-purple-900 px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                            ⭐ MOST POPULAR
+                        </span>
+                    </div>
+                    <div class="text-center text-white mt-4">
+                        <h3 class="text-2xl font-bold mb-2">Standard</h3>
+                        <p class="text-purple-100 mb-6">Best value for money</p>
+                        <div class="mb-8">
+                            <span class="text-5xl font-extrabold">$250</span>
+                            <span class="text-purple-200">/visit</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-white">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 text-xl"></i>
+                            Up to 1,600 sq ft
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 text-xl"></i>
+                            Deep cleaning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 text-xl"></i>
+                            6 hours of service
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 text-xl"></i>
+                            Premium products
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 text-xl"></i>
+                            Window cleaning
+                        </li>
+                    </ul>
+                    <a href="#contact" class="shine block w-full bg-white text-purple-700 text-center py-4 rounded-xl font-bold hover:bg-yellow-300 hover:text-purple-900 transition shadow-lg">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-200 hover:border-purple-300 transition">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Premium</h3>
+                        <p class="text-gray-600 mb-6">Complete and exclusive service</p>
+                        <div class="mb-8">
+                            <span class="text-5xl font-extrabold gradient-text">$400</span>
+                            <span class="text-gray-600">/visit</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Unlimited square footage
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Ultra deep cleaning
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            8 hours of service
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Imported products
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            All extra services
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            Dedicated manager
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-gray-100 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-200 transition">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-600 text-lg bg-purple-50 inline-block px-8 py-4 rounded-xl">
+                    <i class="fas fa-info-circle mr-2 text-purple-600"></i>
+                    Monthly plans with up to 20% discount. Contact us for a personalized quote.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4">
+                    <span class="bg-yellow-100 text-yellow-800 px-6 py-2 rounded-full text-sm font-semibold">
+                        TESTIMONIALS
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    What Our <span class="gradient-text">Clients Say</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Real testimonials from those who trust Annie's</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500">
+                    <div class="flex mb-6">
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">
+                        "Excellent service! The team is very professional and left my house spotless. 
+                        Highly recommend Annie's House Cleaning!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-gradient-to-br from-purple-400 to-purple-600 w-14 h-14 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                            <i class="fas fa-user text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Maria Silva</p>
+                            <p class="text-sm text-gray-600">Client for 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500">
+                    <div class="flex mb-6">
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">
+                        "Punctuality, efficiency and attention to detail. The post-construction cleaning 
+                        exceeded all expectations!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-gradient-to-br from-purple-400 to-purple-600 w-14 h-14 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                            <i class="fas fa-user text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">John Santos</p>
+                            <p class="text-sm text-gray-600">Client for 6 months</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500">
+                    <div class="flex mb-6">
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">
+                        "Best cleaning company I've ever hired! Fair price, exceptional quality 
+                        and very polite team."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-gradient-to-br from-purple-400 to-purple-600 w-14 h-14 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                            <i class="fas fa-user text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Ana Paula</p>
+                            <p class="text-sm text-gray-600">Client for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4">
+                    <span class="bg-purple-100 text-purple-700 px-6 py-2 rounded-full text-sm font-semibold">
+                        GET IN TOUCH
+                    </span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    Request Your <span class="gradient-text">Free Quote</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Contact us with no obligation and transform your home today</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-800 font-bold mb-3 text-sm uppercase tracking-wide">Full Name</label>
+                            <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 transition" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-800 font-bold mb-3 text-sm uppercase tracking-wide">Email</label>
+                            <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 transition" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-800 font-bold mb-3 text-sm uppercase tracking-wide">Phone</label>
+                            <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 transition" placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-gray-800 font-bold mb-3 text-sm uppercase tracking-wide">Desired Service</label>
+                            <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 transition">
+                                <option>General Cleaning</option>
+                                <option>Deep Cleaning</option>
+                                <option>Post-Construction</option>
+                                <option>Regular Cleaning</option>
+                                <option>Move In/Out</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-800 font-bold mb-3 text-sm uppercase tracking-wide">Message</label>
+                            <textarea rows="4" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 transition" placeholder="Tell us more about your needs..."></textarea>
+                        </div>
+                        <button type="submit" class="shine w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Request
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-10 rounded-3xl shadow-2xl">
+                        <h3 class="text-3xl font-bold mb-8">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start group">
+                                <div class="bg-white/20 p-4 rounded-xl mr-5 group-hover:bg-white/30 transition">
+                                    <i class="fas fa-map-marker-alt text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Address</p>
+                                    <p class="text-purple-100">123 Flowers Street - Downtown<br>New York, NY - 10001</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="bg-white/20 p-4 rounded-xl mr-5 group-hover:bg-white/30 transition">
+                                    <i class="fas fa-phone text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Phone</p>
+                                    <p class="text-purple-100">(212) 555-0123</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="bg-white/20 p-4 rounded-xl mr-5 group-hover:bg-white/30 transition">
+                                    <i class="fas fa-envelope text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Email</p>
+                                    <p class="text-purple-100">contact@annieshousecleaning.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="bg-white/20 p-4 rounded-xl mr-5 group-hover:bg-white/30 transition">
+                                    <i class="fas fa-clock text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Business Hours</p>
+                                    <p class="text-purple-100">Monday to Saturday: 8am - 6pm<br>Sunday: Emergencies Only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-white p-10 rounded-3xl border-2 border-purple-200">
+                        <h4 class="text-2xl font-bold mb-6 text-gray-800">Follow Us on Social Media</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gradient-to-br from-purple-600 to-purple-700 text-white w-14 h-14 rounded-xl flex items-center justify-center hover:shadow-xl transition transform hover:scale-110">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-br from-purple-600 to-purple-700 text-white w-14 h-14 rounded-xl flex items-center justify-center hover:shadow-xl transition transform hover:scale-110">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-br from-purple-600 to-purple-700 text-white w-14 h-14 rounded-xl flex items-center justify-center hover:shadow-xl transition transform hover:scale-110">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-br from-purple-600 to-purple-700 text-white w-14 h-14 rounded-xl flex items-center justify-center hover:shadow-xl transition transform hover:scale-110">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 p-3 rounded-xl mr-3">
+                            <i class="fas fa-sparkles text-white text-2xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">Annie's</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming houses into even more welcoming homes through professional cleaning.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-purple-400 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
+                        <li><a href="#services" class="hover:text-purple-400 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Services</a></li>
+                        <li><a href="#about" class="hover:text-purple-400 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>About Us</a></li>
+                        <li><a href="#pricing" class="hover:text-purple-400 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-purple-400 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-2 text-xs"></i>General Cleaning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-2 text-xs"></i>Deep Cleaning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-2 text-xs"></i>Post-Construction</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-2 text-xs"></i>Regular Cleaning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-2 text-xs"></i>Move In/Out</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-6">Get cleaning tips and special offers</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-l-xl focus:outline-none text-gray-800">
+                        <button class="bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-3 rounded-r-xl hover:shadow-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Annie's House Cleaning. All rights reserved. Made with <i class="fas fa-heart text-red-500"></i> for cleaner homes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                alert('Mobile menu - implement as needed');
+            });
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Add animation on scroll for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all card-hover elements
+        setTimeout(() => {
+            document.querySelectorAll('.card-hover').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }, 100);
+    </script>
+</body>
+</html>
