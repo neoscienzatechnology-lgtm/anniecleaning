@@ -131,6 +131,27 @@
                 min-width: 48px;
             }
             
+            /* Fix buttons to prevent cutting on iPhone */
+            .btn, button, a[href*="#contact"], nav a {
+                padding: 0.75rem 1rem !important;
+                font-size: 0.875rem !important;
+                white-space: nowrap;
+                overflow: visible;
+                text-overflow: clip;
+            }
+            
+            /* Specific fixes for navigation buttons */
+            nav .bg-gradient-to-r {
+                padding: 0.625rem 1rem !important;
+                min-width: auto !important;
+            }
+            
+            /* Hero CTA buttons */
+            .hero-gradient button, .hero-gradient a {
+                padding: 0.875rem 1.25rem !important;
+                font-size: 0.9rem !important;
+            }
+            
             /* Better spacing on mobile */
             .py-24 {
                 padding-top: 3rem !important;
@@ -178,6 +199,17 @@
             nav {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
+            }
+            
+            /* Fix button containers */
+            .flex.gap-4, .flex.gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Ensure all buttons fit properly */
+            a, button {
+                box-sizing: border-box;
+                max-width: 100%;
             }
             
             /* Hide desktop-only elements */
