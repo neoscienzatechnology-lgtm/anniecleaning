@@ -77,6 +77,167 @@
             33% { transform: translate(30px, -50px) scale(1.1); }
             66% { transform: translate(-20px, 20px) scale(0.9); }
         }
+
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            /* Disable heavy animations on mobile for better performance */
+            .blob {
+                display: none;
+            }
+            
+            .floating {
+                animation: none;
+            }
+            
+            /* Better hero section on mobile */
+            .hero-gradient {
+                padding-top: 100px !important;
+                padding-bottom: 80px !important;
+            }
+            
+            /* Optimize text sizes for mobile */
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .text-6xl, .text-7xl {
+                font-size: 2.25rem !important;
+            }
+            
+            .text-5xl {
+                font-size: 2rem !important;
+            }
+            
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+            
+            .text-xl {
+                font-size: 1.125rem !important;
+            }
+            
+            /* Improve touch targets - minimum 44x44px */
+            button, a.cta-button, .submit-btn {
+                min-height: 48px;
+                min-width: 48px;
+            }
+            
+            /* Better spacing on mobile */
+            .py-24 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .mb-20 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .gap-16 {
+                gap: 2rem !important;
+            }
+            
+            .gap-12 {
+                gap: 1.5rem !important;
+            }
+            
+            /* Prevent zoom on input focus (iOS) */
+            input, textarea, select {
+                font-size: 16px !important;
+            }
+            
+            /* Better form layout on mobile */
+            .contact-form {
+                padding: 1.5rem !important;
+            }
+            
+            /* Optimize pricing cards on mobile */
+            .pricing-card {
+                transform: none !important;
+                scale: 1 !important;
+            }
+            
+            /* Better nav on mobile */
+            nav {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Hide desktop-only elements */
+            .md\:block {
+                display: none !important;
+            }
+            
+            .hidden.md\:flex {
+                display: none !important;
+            }
+        }
+
+        /* Tablet optimizations */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .text-6xl, .text-7xl {
+                font-size: 3rem !important;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem !important;
+            }
+            
+            /* Reduce padding on tablets */
+            .py-24 {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+        }
+
+        /* Improve image loading on mobile */
+        @media (max-width: 768px) {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Better card grid on mobile */
+            .services-grid, .features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Stack testimonials on mobile */
+            .grid.md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Performance optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .floating, .blob {
+                animation: none !important;
+            }
+        }
     </style>
 </head>
 <body class="smooth-scroll bg-gray-50">
